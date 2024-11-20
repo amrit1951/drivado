@@ -8,12 +8,12 @@ class UserController extends GetxController {
   RxBool userSelected = true.obs;
   var userList = [].obs;
   var companyList = [].obs;
+
   Future<void> fetchUserData() async {
     try {
       isLoading(true);
       final res = await Repository.usersApi();
       userList.value = res;
-      // logger.f(userList);
     } catch (e) {
       logger.e("error: $e");
     }
@@ -24,7 +24,6 @@ class UserController extends GetxController {
       isLoading(true);
       final res = await Repository.companyApi();
       companyList.value = res;
-      logger.f(userList);
     } catch (e) {
       logger.e("error: $e");
     }

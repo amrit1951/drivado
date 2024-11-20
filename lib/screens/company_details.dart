@@ -2,6 +2,8 @@ import 'package:drivado/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'components/bottombar.dart';
+
 class CompanyDetailsScreen extends StatelessWidget {
   final String comImg;
   final String comName;
@@ -31,6 +33,17 @@ class CompanyDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      bottomNavigationBar: const MobBottom(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: red,
+        shape: const CircleBorder(),
+        child: Icon(
+          Icons.add,
+          color: white,
+        ),
+      ),
       appBar: AppBar(
         toolbarHeight: 90,
         backgroundColor: Colors.black,

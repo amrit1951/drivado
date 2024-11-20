@@ -1,3 +1,4 @@
+import 'package:drivado/screens/components/bottombar.dart';
 import 'package:drivado/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,17 @@ class UserDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      bottomNavigationBar: const MobBottom(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: red,
+        shape: const CircleBorder(),
+        child: Icon(
+          Icons.add,
+          color: white,
+        ),
+      ),
       appBar: AppBar(
         toolbarHeight: 90,
         backgroundColor: Colors.black,

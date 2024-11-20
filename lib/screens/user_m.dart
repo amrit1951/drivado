@@ -1,5 +1,6 @@
 import 'package:drivado/screens/company_details.dart';
 import 'package:drivado/screens/components/appbar.dart';
+import 'package:drivado/screens/components/bottombar.dart';
 import 'package:drivado/screens/components/compay_card.dart';
 import 'package:drivado/screens/components/user_card.dart';
 import 'package:drivado/screens/user_details.dart';
@@ -36,6 +37,17 @@ class _UserManageState extends State<UserManage> {
     return Obx(
       () => Scaffold(
         backgroundColor: white,
+        bottomNavigationBar: const MobBottom(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: red,
+          shape: const CircleBorder(),
+          child: Icon(
+            Icons.add,
+            color: white,
+          ),
+        ),
         body: Column(
           children: [
             appBar(),
